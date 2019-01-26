@@ -1,14 +1,28 @@
 fileFormatVersion: 2
-guid: 92d3f53a90f024f4dac1ba415fbd9a69
+guid: 51fd780265ba14bf8a3610a2c4b2464d
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: pCone10
+    100004: pCone11
+    100006: pCone12
+    100008: pCone13
+    100010: transform6
+    100012: transform7
+    100014: transform8
     400000: //RootNode
+    400002: pCone10
+    400004: pCone11
+    400006: pCone12
+    400008: pCone13
+    400010: transform6
+    400012: transform7
+    400014: transform8
     2100000: lambert1
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: polySurface3
+    2300000: pCone13
+    3300000: pCone13
+    4300000: pCone13
   externalObjects: {}
   materials:
     importMaterials: 1

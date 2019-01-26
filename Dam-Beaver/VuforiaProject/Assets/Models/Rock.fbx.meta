@@ -1,14 +1,40 @@
 fileFormatVersion: 2
-guid: 92d3f53a90f024f4dac1ba415fbd9a69
+guid: 981dbd4dbd18541ffab528f6ca16e67a
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
+    100000: pCube3
+    100002: pCylinder5
+    100004: polySurface10
+    100006: polySurface7
+    100008: polySurface8
+    100010: polySurface9
+    100012: polySurface9 1
+    100014: //RootNode
+    100016: transform10
+    100018: transform11
+    100020: transform12
+    100022: transform13
+    100024: transform9
+    400000: pCube3
+    400002: pCylinder5
+    400004: polySurface10
+    400006: polySurface7
+    400008: polySurface8
+    400010: polySurface9
+    400012: polySurface9 1
+    400014: //RootNode
+    400016: transform10
+    400018: transform11
+    400020: transform12
+    400022: transform13
+    400024: transform9
     2100000: lambert1
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: polySurface3
+    2300000: polySurface9
+    3300000: polySurface9
+    4300000: polySurface9
+    7400000: Take 001
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -62,7 +88,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -89,7 +115,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
