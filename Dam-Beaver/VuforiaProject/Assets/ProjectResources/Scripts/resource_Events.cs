@@ -14,7 +14,7 @@ public class resource_Events : MonoBehaviour
     [SerializeField] private float moveSpd;
     [SerializeField] private GameObject walkTarget;
     private float walkTimer = 10f;
-    private float atkTimer = 0f;
+    //private float atkTimer = 0f;
     private Vector3 camOffset = new Vector3(0, 0, -4f);
     private Quaternion targetRotation;
 
@@ -80,7 +80,7 @@ public class resource_Events : MonoBehaviour
     void Run()
     {
         walkTimer -= Time.deltaTime;
-        atkTimer -= Time.deltaTime;
+        //atkTimer -= Time.deltaTime;
         Anim.Play("walk");
 
         //start spider walking
