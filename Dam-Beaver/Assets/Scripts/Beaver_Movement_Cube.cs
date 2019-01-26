@@ -6,7 +6,7 @@ public class Beaver_Movement_Cube : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        moveSpeed = 1f;
+        moveSpeed = 100;
 	}
 	
 	// Update is called once per frame
