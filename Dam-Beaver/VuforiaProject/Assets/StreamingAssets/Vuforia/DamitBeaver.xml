@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="TimeMinus10" size="6.000000 8.388815" />
+    <ImageTarget name="mud-01" size="6.000000 8.388815" />
+    <ImageTarget name="Fever" size="6.000000 8.400000" />
+    <ImageTarget name="Beiber" size="6.000000 8.388815" />
+    <ImageTarget name="greenLog" size="6.000000 8.400000" />
+  </Tracking>
+</QCARConfig>
