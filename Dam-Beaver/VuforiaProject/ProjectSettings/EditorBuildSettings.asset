@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Damnit_Beaver_Scene.unity
+    guid: 8a308ae5abca3ba42a0e169a1f87843e
   m_configObjects: {}

@@ -16,12 +16,25 @@ public class Beaver_Control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var rigibody = GetComponent<Rigidbody>();
+        
+        var joy_position_x = joystick.Horizontal;
+        var joy_position_y = joystick.Vertical;
+        Debug.Log(joy_position_x);
+        Debug.Log(joy_position_y);
 
-        var x = joystick.Horizontal * 10f + Input.GetAxis("Horizontal") * 25f;
-        var y = joystick.Vertical * 10f + Input.GetAxis("Vertical") * 25f;
-        var z = 0f;
+        if (joy_position_x != 0 || joy_position_y != 0)
+        {
 
-        transform.Translate(x *  Time.deltaTime, z, y * Time.deltaTime);
+            transform.LookAt(new Vector3(transform.position.x + joy_position_x, transform.position.y, transform.position.z + joy_position_y));
+            transform.Translate(Vector3.forward * Time.deltaTime * 8);
+        }
+
+        //var rigibody = GetComponent<Rigidbody>();
+
+        //var x = (joystick.Horizontal * 2f + Input.GetAxis("Horizontal"))/(float)10.0;
+        //var y = 0;
+        //var z = (joystick.Vertical * 2f + Input.GetAxis("Vertical"))/(float) 10.0;
+
+        //transform.Translate(x *  Time.deltaTime, y * Time.deltaTime, z);
     }
 }
