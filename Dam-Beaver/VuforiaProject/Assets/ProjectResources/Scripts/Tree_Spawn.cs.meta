@@ -1,10 +1,11 @@
 fileFormatVersion: 2
-guid: 15fc64789dda4cb4389774881d8be931
+guid: 39a272a520d28194ca79d20837a98cf4
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - playerTransform: {instanceID: 0}
+  - Tree_Prefab_gameObject: {fileID: 846019931374143313, guid: 3299460804b014e9e8b1bf754cb377ab,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
