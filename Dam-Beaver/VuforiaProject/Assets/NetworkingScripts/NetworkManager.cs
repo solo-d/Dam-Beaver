@@ -6,6 +6,7 @@ public class NetworkManager : Photon.PunBehaviour
 {
 
     public GameObject player;
+ 
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class NetworkManager : Photon.PunBehaviour
     public override void OnJoinedRoom()
     {
         Debug.Log("Connected to Room");
-        PhotonNetwork.Instantiate("Beaver", player.transform.position, Quaternion.identity, 0);
+        PhotonNetwork.Instantiate("Beaver-Final", player.transform.position, Quaternion.identity, 0);
     }
 
     void Update()
