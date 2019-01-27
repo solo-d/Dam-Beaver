@@ -16,7 +16,7 @@ public class DropOff_Object : MonoBehaviour
 
             collision.gameObject.transform.parent = playerTransform.transform;
 
-            CreatePrefab(playerTransform.gameObject);
+            SwapPrefabs(playerTransform.gameObject);
 
         }
         else if (collision.gameObject.name == ("Mud"))
@@ -29,34 +29,62 @@ public class DropOff_Object : MonoBehaviour
         }
     }
 
-    static void CreatePrefab(GameObject preFab)
+    /// <summary>Swaps the desired oldGameObject for a newPrefab.</summary>
+    /// <param name="oldGameObject">The old game object.</param>
+    void SwapPrefabs(GameObject oldGameObject)
     {
-        // Ref link   https://answers.unity.com/questions/551934/instantiating-using-a-string-for-prefab-name.html
+        // Determine the rotation and position values of the old game object.
+        // Replace rotation with Quaternion.identity if you do not wish to keep rotation.
+        Quaternion rotation = oldGameObject.transform.rotation;
+        Vector3 position = oldGameObject.transform.position;
 
-        var planet = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Stump.prefab", typeof(GameObject));
+        // Instantiate the new game object at the old game objects position and rotation.
+        //GameObject newGameObject = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Stump.prefab", typeof(GameObject));
 
-        string charName = "stump";
-            
-            // duplicate
-            GameObject newInstance = Instantiate(preFab);
-            newInstance.name = charName;
+        Object newPreFab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Final/Stump.prefab", typeof(GameObject));
+        GameObject newGameObject = Instantiate(newPreFab, position, rotation) as GameObject;
 
-            // now replace the prefab
-            string prefabPath = "Assets/Prefabs/" + charName + ".prefab";
-            var existingPrefab = AssetDatabase.LoadAssetAtPath(prefabPath, typeof(GameObject));
-            if (existingPrefab != null)
-            {
-                PrefabUtility.ReplacePrefab(newInstance, planet, ReplacePrefabOptions.ReplaceNameBased);
-            }
-            else
-            {
-                PrefabUtility.CreatePrefab("Assets/Prefabs/Stump.prefab", newInstance);
-            }
+        // If the old game object has a valid parent transform,
+        // (You can remove this entire if statement if you do not wish to ensure your
+        // new game object does not keep the parent of the old game object.
+        if (oldGameObject.transform.parent != null)
+        {
+            // Set the new game object parent as the old game objects parent.
+            newGameObject.transform.SetParent(oldGameObject.transform.parent);
+        }
 
-            // delete dupe
-            DestroyImmediate(newInstance);
-
-            Debug.Log("Prefab'd " + charName + "! \"" + prefabPath + "\"");
+        // Destroy the old game object, immediately, so it takes effect in the editor.
+        Destroy(oldGameObject);
     }
+
+    //static void CreatePrefab(GameObject preFab)
+    //{
+    //    // Ref link   https://answers.unity.com/questions/551934/instantiating-using-a-string-for-prefab-name.html
+
+    //    var planet = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Stump.prefab", typeof(GameObject));
+
+    //    string charName = "stump";
+            
+    //        // duplicate
+    //        GameObject newInstance = Instantiate(preFab);
+    //        newInstance.name = charName;
+
+    //        // now replace the prefab
+    //        string prefabPath = "Assets/Prefabs/" + charName + ".prefab";
+    //        var existingPrefab = AssetDatabase.LoadAssetAtPath(prefabPath, typeof(GameObject));
+    //        if (existingPrefab != null)
+    //        {
+    //            PrefabUtility.ReplacePrefab(newInstance, planet, ReplacePrefabOptions.ReplaceNameBased);
+    //        }
+    //        else
+    //        {
+    //            PrefabUtility.CreatePrefab("Assets/Prefabs/Stump.prefab", newInstance);
+    //        }
+
+    //        // delete dupe
+    //        DestroyImmediate(newInstance);
+
+    //        Debug.Log("Prefab'd " + charName + "! \"" + prefabPath + "\"");
+    //}
 
 }
