@@ -41,7 +41,7 @@ public class DropOff_Object : MonoBehaviour
         // Instantiate the new game object at the old game objects position and rotation.
         //GameObject newGameObject = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Stump.prefab", typeof(GameObject));
 
-        Object newPreFab = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Final/Stump.prefab", typeof(GameObject));
+        Object newPreFab = Resources.Load("Assets/Prefabs/Final/Stump.prefab", typeof(GameObject));
         GameObject newGameObject = Instantiate(newPreFab, position, rotation) as GameObject;
 
         // If the old game object has a valid parent transform,
