@@ -14,9 +14,10 @@ public class DiceSideChecker : MonoBehaviour
 
     void OnTriggerStay(Collider col)
     {
-        Debug.Log("OK");
+        Debug.Log("Collision Detection");
         if (dice_velocity.x == 0f && dice_velocity.y == 0f && dice_velocity.z == 0f)
         {
+            Debug.Log("Search Dice Results");
             Debug.Log(col.gameObject.name);
             switch (col.gameObject.name)
             {

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b14f08dddd21a9f4a9bf458375fbf245
+guid: 39a272a520d28194ca79d20837a98cf4
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - walkTarget: {fileID: 846019931374143313, guid: 3299460804b014e9e8b1bf754cb377ab,
+  - Tree_Prefab_gameObject: {fileID: 846019931374143313, guid: 3299460804b014e9e8b1bf754cb377ab,
       type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
