@@ -18,8 +18,8 @@ public class Beaver_Control : MonoBehaviour
     {
         var rigibody = GetComponent<Rigidbody>();
 
-        var x = joystick.Horizontal * 25f + Input.GetAxis("Horizontal") * 100f;
-        var y = joystick.Vertical * 25f + Input.GetAxis("Vertical") * 100f;
+        var x = joystick.Horizontal * 10f + Input.GetAxis("Horizontal") * 25f;
+        var y = joystick.Vertical * 10f + Input.GetAxis("Vertical") * 25f;
         var z = 0f;
 
         transform.Translate(x *  Time.deltaTime, z, y * Time.deltaTime);
