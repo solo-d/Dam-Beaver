@@ -6,7 +6,7 @@ public class MoveObject : MonoBehaviour
  
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == ("damLog"))
+        if (collision.gameObject.name == ("damLog-Final") || collision.gameObject.name == ("Mud"))
         {
             collision.gameObject.transform.parent = playerTransform.transform ;
         }
